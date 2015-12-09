@@ -5,7 +5,7 @@ var generate = function generate(orgUnitId){
         "Quiz": {}
     }
     
-    toReturn[orgUnitId]["Quiz"][startDate = new Date().setUTCHours(5,0,0,0)] = 0;
+    toReturn[orgUnitId]["Quiz"][startDate = new Date().setUTCHours(5,0,0,0)] = 45;
     
     return toReturn;
 };
