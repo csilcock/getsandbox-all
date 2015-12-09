@@ -3,12 +3,9 @@ var generateCourseAccessData = require('CourseAccess/course-access-data.js').gen
     generateTotalLoginsData = require('TotalLogins/total-logins-data.js').generate,
     utils = require('Common/utils.js');
 
-/**
- *  Course Access Report Route
- */
-
 Sandbox.define('/d2l/api/adp/unstable/aggregatedEvents/{id}','GET', function(req, res) {
-    var result = generateTotalLoginsData();
+    //var result = generateTotalLoginsData();
+    var result = generateToolAccessData();
 
     res.type('application/json');
     res.status(200);
