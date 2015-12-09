@@ -7,7 +7,7 @@ var generateCourseAccessData = require('CourseAccess/course-access-data.js').gen
  *  Course Access Report Route
  */
 
-Sandbox.define('/d2l/api/adp/unstable/aggregatedEvents/{id}','GET', function(req, res) {
+Sandbox.define('/d2l/api/adp/unstable/aggregatedEvents/{id}/{courseId}/Course Offering','GET', function(req, res) {
     var result = generateCourseAccessData();
 
     res.type('application/json');
