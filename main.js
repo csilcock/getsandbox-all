@@ -7,8 +7,16 @@ var generateCourseAccessData = require('CourseAccess/course-access-data.js').gen
  *  Course Access Report Route
  */
 
+Sandbox.define('/d2l/api/adp/unstable/aggregatedEvents/{id}','GET', function(req, res) {
+    var result = generateTotalLoginsData();
+
+    res.type('application/json');
+    res.status(200);
+    res.json(result);
+});
+
 Sandbox.define('/d2l/api/adp/unstable/aggregatedEvents/{id}/{courseId}/Course Offering','GET', function(req, res) {
-    var result = generateCourseAccessData();
+    var result = generateCourseAccessData(req.params.id, req.params.courseId);
 
     res.type('application/json');
     res.status(200);
