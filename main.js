@@ -21,3 +21,11 @@ Sandbox.define('/d2l/api/adp/unstable/aggregatedEvents/{id}/{courseId}/Course Of
     res.status(200);
     res.json(result);
 });
+
+Sandbox.define('/d2l/api/adp/unstable/aggregatedEvents/{id}/{courseId}','GET', function(req, res) {
+    var result = generateToolAccessData(req.params.courseId, undefined, dates.startTime, dates.endTime);
+
+    res.type('application/json');
+    res.status(200);
+    res.json(result);
+});
