@@ -4,7 +4,7 @@ var consts = require('../Common/consts.js').consts,
 var generate = function generate() {
     var results = {},
         endDate = new Date(Date.now()).setUTCHours(5,0,0,0),
-        startDate = new Date(endDate - consts.MS_PER_DAY * 10).setUTCHours(4,0,0,0),
+        startDate = new Date(endDate - consts.MS_PER_DAY * 10).setUTCHours(5,0,0,0),
         dateDiff = endDate - startDate,
         roleIds = consts.ROLE_IDS;
         
