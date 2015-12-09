@@ -22,7 +22,7 @@ var generate = function generate(){
 
 var generateOrgUnit = function generateOrgUnit(orgUnitId){
 
-    var allData = {orgUnitId: orgUnitId};
+    var allData = {};
     for(var i =0; i<consts.ROLE_IDS.length; i++){
         var role = consts.ROLE_IDS[i];
         allData[orgUnitId][role.id] = {};
