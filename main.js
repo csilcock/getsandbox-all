@@ -2,6 +2,7 @@ var generateCourseAccessData = require('CourseAccess/course-access-data.js').gen
     generateToolAccessData = require('ToolAccess/tool-access-data.js').generate,
     generateToolAccessDataOrgUnit = require('ToolAccess/tool-access-data.js').generateOrgUnit,
     generateTotalLoginsData = require('TotalLogins/total-logins-data.js').generate,
+    generateQuizData = require('Engagement/quizzing-data.js').generate,
     utils = require('Common/utils.js');
 
 Sandbox.define('/d2l/api/adp/unstable/aggregatedEvents/{id}','GET', function(req, res) {
