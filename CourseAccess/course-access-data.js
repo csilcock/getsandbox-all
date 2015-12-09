@@ -3,8 +3,8 @@ var consts = require('../Common/consts.js').consts,
 
 var generate = function generate(orgUnit, roleId, start, end) {
     var results = {},
-        startDate = new Date(start).setUTCHours(0,0,0,0),
-        endDate = new Date(end).setUTCHours(0,0,0,0),
+        startDate = new Date(start).setUTCHours(5,0,0,0),
+        endDate = new Date(end).setUTCHours(5,0,0,0),
         dateDiff = endDate - startDate,
         roleIds = consts.ROLE_IDS;
         
