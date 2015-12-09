@@ -30,3 +30,11 @@ Sandbox.define('/d2l/api/adp/unstable/aggregatedEvents/{id}/{courseId}','GET', f
     res.status(200);
     res.json(result);
 });
+
+Sandbox.define('/d2l/api/adp/unstable/aggregatedEvents/{aggregationId}/{orgUnitId}/Quiz','GET', function(req, res) {
+    var result = generateQuizData(req.params.orgUnitId);
+    
+    res.type('application/json');
+    res.status(200);
+    res.json(result);
+});
