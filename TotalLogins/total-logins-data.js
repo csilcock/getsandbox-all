@@ -19,8 +19,6 @@ var generate = function generate() {
             
             var day = new Date(currTimestamp).getDay();
             
-            
-            if (k == 360 || (k > 15 && k < 19)) //continue;
             results[role.id][currTimestamp] = getRandomLogins(100, role.useLevel, consts.DAY_WEIGHTS[day]);
         }
     }
