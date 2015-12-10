@@ -28,7 +28,7 @@ var generate = function generate(orgUnit, roleId, start, end) {
             var day = new Date(currTimestamp).getDay();
             
             //todo: update this to use weighting based on role once role filtering is implimented in the FRA
-            results[orgUnit]["Course Offering"][role.id][currTimestamp] = 0;//getRandomLogins(100, 0.01, consts.DAY_WEIGHTS[day]);
+            results[orgUnit]["Course Offering"][role.id][currTimestamp] = getRandomLogins(100, 0.01, consts.DAY_WEIGHTS[day]);
         }
     }
     
