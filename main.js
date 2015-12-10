@@ -6,8 +6,8 @@ var generateCourseAccessData = require('CourseAccess/course-access-data.js').gen
     utils = require('Common/utils.js');
 
 Sandbox.define('/d2l/api/adp/unstable/aggregatedEvents/{id}','GET', function(req, res) {
-    var result = generateTotalLoginsData();
-    //var result = generateToolAccessData();
+    //var result = generateTotalLoginsData();
+    var result = generateToolAccessData();
 
     res.type('application/json');
     res.status(200);
