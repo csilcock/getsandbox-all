@@ -1,7 +1,7 @@
 var consts = {
     MS_PER_DAY: 86400000,
     MS_PER_YEAR: 31536000000,
-    MAX_RESULTS: 90,
+    MAX_RESULTS: 15,
     VARIANCE: 5,
     VOLUME: 5,
     ROLE_IDS:[
