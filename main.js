@@ -21,7 +21,7 @@ Sandbox.define('/v1/aggregates/80000/data','GET', function(req, res) {
     res.json(result);
 });
 
-Sandbox.define('/d2l/api/adp/unstable/aggregatedEvents/{id}/{courseId}/Course Offering','GET', function(req, res) {
+Sandbox.define('/v1/aggregates/{id}/data/{courseId}/Course Offering','GET', function(req, res) {
     var dates = utils.parseDates(req.query.startTime, req.query.endTime);
     
     var result = generateCourseAccessData(req.params.courseId, undefined, dates.startTime, dates.endTime);
@@ -31,7 +31,7 @@ Sandbox.define('/d2l/api/adp/unstable/aggregatedEvents/{id}/{courseId}/Course Of
     res.json(result);
 });
 
-Sandbox.define('/d2l/api/adp/unstable/aggregatedEvents/{id}/{courseId}','GET', function(req, res) {
+Sandbox.define('/v1/aggregates/{id}/data/{courseId}','GET', function(req, res) {
     var result = generateToolAccessDataOrgUnit(req.params.courseId);
 
     res.type('application/json');
@@ -39,7 +39,7 @@ Sandbox.define('/d2l/api/adp/unstable/aggregatedEvents/{id}/{courseId}','GET', f
     res.json(result);
 });
 
-Sandbox.define('/d2l/api/adp/unstable/aggregatedEvents/{aggregationId}/{orgUnitId}/Quiz','GET', function(req, res) {
+Sandbox.define('/v1/aggregates/{id}/data/{orgUnitId}/Quiz','GET', function(req, res) {
     var result = generateQuizData(req.params.orgUnitId);
     
     res.type('application/json');
